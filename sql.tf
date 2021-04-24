@@ -10,7 +10,7 @@ resource "azurerm_sql_server" "sqldb" {
 resource "azurerm_sql_database" "db" {
   name                = var.sql_database_name
   resource_group_name = "sql"
-  location            = azurerm_resource_group.rg.location
+  location            = "canadacentral"
   server_name         = azurerm_sql_server.sqldb.name
 }
  
